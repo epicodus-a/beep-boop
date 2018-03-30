@@ -9,10 +9,10 @@
 // - Example Output: ['I\'m sorry, Dave. I'm afraid I can't do that.']
 
 // business logic
-const beepBoop = (number) => {
+const beepBoop = (number, name) => {
 	debugger;
 	if (number % 3 === 0){
-		return 'I\'m sorry, Dave. I\'m afraid I can\'t do that.';
+		return 'I\'m sorry, ' + name[0].toUpperCase()+ name.substring(1) +'. I\'m afraid I can\'t do that.';
 	}else if(number.toString().includes("1")){
 		return "Boop!";
 	} else if(number.toString().includes("0")){
@@ -27,10 +27,11 @@ $().ready(function(){
 	$("#number-form").submit(function (e) {
 		e.preventDefault();
 		let number = $("input:text").val();
+		let name = $("input:text[name=name]").val();
 		if (number && number >= 0){
 			result = [];
 			for(let i = 0; i <= parseInt(number); i++){
-				result.push(beepBoop(i));
+				result.push(beepBoop(i, name));
 			}
 			result.forEach(function(element){
 				let child = "<p class='lead'>" + element + "</p>";
