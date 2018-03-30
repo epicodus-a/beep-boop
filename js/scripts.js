@@ -10,12 +10,15 @@
 
 // business logic
 const beepBoop = (number) => {
+	debugger;
 	if (number % 3 === 0){
 		return 'I\'m sorry, Dave. I\'m afraid I can\'t do that.';
 	}else if(number.toString().includes("1")){
 		return "Boop!";
 	} else if(number.toString().includes("0")){
 		return "Beep!";
+	}else{
+		return "I\'m not going to response to this one. ";
 	}
 };
 
@@ -24,13 +27,18 @@ $().ready(function(){
 	$("#number-form").submit(function (e) {
 		e.preventDefault();
 		let number = $("input:text").val();
-		result = [];
-		for(let i = 0; i <= parseInt(number); i++){
-			result.push(beepBoop(i));
-		}
-		result.forEach(function(element){
-			let child = "<p class='lead'>" + element + "</p>";
+		if (number && number >= 0){
+			result = [];
+			for(let i = 0; i <= parseInt(number); i++){
+				result.push(beepBoop(i));
+			}
+			result.forEach(function(element){
+				let child = "<p class='lead'>" + element + "</p>";
+				$(".output").append(child);
+			});
+		}else{
+			let child = "<p class='lead'> Please enter a number >= 0</p>";
 			$(".output").append(child);
-		})
+		}
 	});
 });
