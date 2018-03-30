@@ -14,56 +14,55 @@
 	<title>beep boop</title>
 </head>
 <body>
-	<div class="container-fluid">
-		<div class="jumbotron-fluid">
-			<h3>Beep Boop No.....</h3>
-			<hr>
+<div class="jumbotron-fluid my-5 text-center">
+	<h3 class="text-xl-center">Beep Boop No.....</h3>
+	<hr>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<form id="number-form">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Please enter a number >= 0" required>
+				</div>
+				<div class="form-group">
+					<input type="text" name="name" class="form-control" placeholder="Please enter your name" required>
+				</div>
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<div class="input-group-text">
+							<input type="radio" aria-label="Radio button for following text input" name="order" value="0">
+						</div>
+					</div>
+					<input type="text" class="form-control" aria-label="Text input with radio button"
+					       placeholder="show result in ascending order">
+				</div>
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<div class="input-group-text">
+							<input type="radio" aria-label="Radio button for following text input" name="order" value="1">
+						</div>
+					</div>
+					<input type="text" class="form-control" aria-label="Text input with radio button"
+					       placeholder="show result in descending order">
+				</div>
+				<button class="btn btn-success form-control my-5">submit</button>
+			</form>
 		</div>
-
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<form id="number-form">
-						<input type="text" class="form-control" placeholder="Please enter a number >= 0" required>
-						<input type="text" name="name" class="form-control" placeholder="Please enter your name" required>
-						<div class="input-group">
-							<div class="input-group-prepend">
-								<div class="input-group-text">
-									<input type="radio" aria-label="Radio button for following text input" name="order" value="0">
-								</div>
-							</div>
-							<input type="text" class="form-control" aria-label="Text input with radio button" placeholder="low to high">
-						</div>
-						<div class="input-group">
-							<div class="input-group-prepend">
-								<div class="input-group-text">
-									<input type="radio" aria-label="Radio button for following text input" name="order" value="1">
-								</div>
-							</div>
-							<input type="text" class="form-control" aria-label="Text input with radio button" placeholder="high to low">
-						</div>
-						<button class="btn btn-outline-primary">submit</button>
-					</form>
-				</div>
-				<div class="output">
-
-				</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<div class="output">
 			</div>
 		</div>
 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<div class="row my-5">
+		<div class="col-12">
+			<button class="btn btn-warning form-control" id="reset">click to play another round</button>
+		</div>
+	</div>
+</div>
+</div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
