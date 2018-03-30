@@ -4,8 +4,7 @@ Mar 30th, 2018
 ### [Live Demo](https://epicodus-a.github.io/beep-boop/)
 
 ### Description
-##### A web application that takes a number from a user and returns a range of numbers from 0 to the chosen number, 
-with the following exceptions:
+##### A web application that takes a number from a user and returns a range of numbers from 0 to the chosen number,with the following exceptions:
 - Program replaces 0 with 'Beep!'
   - Example Input: 0
   - Example Output: ['Beep!']
