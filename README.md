@@ -44,6 +44,7 @@ Mar 30th, 2018
 ### Author/Contributor
 - Adriana
 
+[great commit style:](https://udacity.github.io/git-styleguide/)
 ### License
 - MIT
 

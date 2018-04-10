@@ -50,5 +50,5 @@ $().ready(function () {
 	// reload page when click reset
 	$("#reset").click(function () {
 		window.location.reload();
-	})
+	});
 });
